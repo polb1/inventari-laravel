@@ -46,4 +46,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function assets(){
+       return $this->HasMany(Asset::class);
+    }
+
+    public function assetsHistory(){
+       return $this->HasMany(AssetHistory::class);
+    }
 }
